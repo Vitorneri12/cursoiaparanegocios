@@ -74,7 +74,8 @@ $badgeStatus = [
             <span>Painel administrativo</span>
         </div>
         <div class="adm-actions">
-            <a href="exportar.php<?= $_SERVER['QUERY_STRING'] ? '?' . $_SERVER['QUERY_STRING'] : '' ?>" class="btn btn-secondary btn-sm">⬇ Exportar CSV</a>
+            <?php $qs = http_build_query(array_filter(['q' => $busca, 'status' => $filtroStatus, 'metodo' => $filtroMetodo])); ?>
+            <a href="exportar.php<?= $qs ? '?' . htmlspecialchars($qs) : '' ?>" class="btn btn-secondary btn-sm">⬇ Exportar CSV</a>
             <span class="adm-user">👤 <?= htmlspecialchars($_SESSION['admin_user']) ?></span>
             <a href="logout.php" class="btn btn-secondary btn-sm">Sair</a>
         </div>
