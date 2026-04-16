@@ -63,4 +63,12 @@ return [
     'site' => [
         'url' => 'https://iaparanegocio.texaneduc.com.br',
     ],
+
+    // Credenciais do painel /admintexan
+    // Troque o usuario e gere um novo hash de senha com:
+    //   php -r 'echo password_hash("SUA_SENHA_FORTE", PASSWORD_DEFAULT);'
+    'admin' => [
+        'user'      => 'admin',
+        'pass_hash' => '$2y$12$N57zQpwMFs/ebhOnnqS7A.g9ZHBqy6jL7vs7bJb8Pmy34.gDSCxiq', // senha padrao: admin@texan2026 (TROCAR!)
+    ],
 ];

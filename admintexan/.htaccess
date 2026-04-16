@@ -1,0 +1,8 @@
+# Protege arquivos internos
+<FilesMatch "^_">
+    Order Deny,Allow
+    Deny from all
+</FilesMatch>
+
+# Index padrao
+DirectoryIndex index.php
