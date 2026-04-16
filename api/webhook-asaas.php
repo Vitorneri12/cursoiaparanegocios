@@ -5,6 +5,12 @@ require_once __DIR__ . '/../includes/email.php';
 
 $cfg = config()['asaas'];
 
+// GET = health check (Asaas valida a URL com GET na criacao do webhook)
+if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
+    echo json_encode(['ok' => true, 'msg' => 'webhook endpoint ativo']);
+    exit;
+}
+
 // Validacao do token configurado no painel Asaas (Webhook > Token de autenticacao)
 $tokenRecebido = $_SERVER['HTTP_ASAAS_ACCESS_TOKEN'] ?? '';
 if (!empty($cfg['webhook_token']) && !hash_equals($cfg['webhook_token'], $tokenRecebido)) {
