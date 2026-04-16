@@ -1,0 +1,8 @@
+config/config.php
+*.log
+.DS_Store
+
+# Arquivos-fonte (PDF/logos originais ja copiados para assets/)
+*.pdf
+/logo-1400px.png
+/logo-compact (1).png

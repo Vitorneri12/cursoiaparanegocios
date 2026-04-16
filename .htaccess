@@ -1,0 +1,18 @@
+# Forca HTTPS
+RewriteEngine On
+RewriteCond %{HTTPS} off
+RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+# Bloqueia listagem de diretorios
+Options -Indexes
+
+# Bloqueia acesso ao git e arquivos sensiveis
+<FilesMatch "^\.">
+    Order Deny,Allow
+    Deny from all
+</FilesMatch>
+
+<FilesMatch "(config\.php|\.env|\.sql|\.example\.php)$">
+    Order Deny,Allow
+    Deny from all
+</FilesMatch>
