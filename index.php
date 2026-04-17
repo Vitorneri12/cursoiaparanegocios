@@ -183,12 +183,12 @@ $fmtData = fn(string $d) => date('d/m', strtotime($d));
             </div>
         </div>
 
-        <div class="impact-box impact-yellow">
-            <p>Esta palestra é para quem:</p>
+        <div class="impact-box impact-yellow impact-big">
+            <p class="impact-head">Esta palestra é para quem</p>
             <ul>
-                <li>Quer aumentar faturamento</li>
-                <li>Precisa reduzir custos</li>
-                <li>Entende que decisão baseada em dados não é mais opcional</li>
+                <li>QUER AUMENTAR FATURAMENTO</li>
+                <li>PRECISA REDUZIR CUSTOS</li>
+                <li>ENTENDE QUE DECISÃO BASEADA EM DADOS NÃO É MAIS OPCIONAL</li>
             </ul>
         </div>
     </div>
@@ -265,7 +265,12 @@ $fmtData = fn(string $d) => date('d/m', strtotime($d));
         <div class="grid grid-2">
             <article class="speaker-card" data-speaker>
                 <div class="speaker-head">
-                    <div class="speaker-photo">HG</div>
+                    <?php $f = 'assets/images/palestrantes/higor.jpg'; ?>
+                    <?php if (file_exists(__DIR__ . '/' . $f)): ?>
+                        <img src="<?= $f ?>" alt="Higor Corrêa Gimenes" class="speaker-photo">
+                    <?php else: ?>
+                        <div class="speaker-photo">HG</div>
+                    <?php endif; ?>
                     <div>
                         <h3>Higor Corrêa Gimenes</h3>
                         <p class="speaker-role">CEO da TexanGroup</p>
@@ -285,7 +290,12 @@ $fmtData = fn(string $d) => date('d/m', strtotime($d));
 
             <article class="speaker-card" data-speaker>
                 <div class="speaker-head">
-                    <div class="speaker-photo">CS</div>
+                    <?php $f = 'assets/images/palestrantes/claudio.jpg'; ?>
+                    <?php if (file_exists(__DIR__ . '/' . $f)): ?>
+                        <img src="<?= $f ?>" alt="Claudio Soldera" class="speaker-photo">
+                    <?php else: ?>
+                        <div class="speaker-photo">CS</div>
+                    <?php endif; ?>
                     <div>
                         <h3>Claudio Soldera</h3>
                         <p class="speaker-role">Tecnologia e desenvolvimento de sistemas</p>
@@ -304,7 +314,12 @@ $fmtData = fn(string $d) => date('d/m', strtotime($d));
 
             <article class="speaker-card" data-speaker>
                 <div class="speaker-head">
-                    <div class="speaker-photo">GC</div>
+                    <?php $f = 'assets/images/palestrantes/guilherme.jpg'; ?>
+                    <?php if (file_exists(__DIR__ . '/' . $f)): ?>
+                        <img src="<?= $f ?>" alt="Guilherme Cabreira" class="speaker-photo">
+                    <?php else: ?>
+                        <div class="speaker-photo">GC</div>
+                    <?php endif; ?>
                     <div>
                         <h3>Guilherme Cabreira</h3>
                         <p class="speaker-role">Dados e soluções inteligentes</p>
@@ -323,7 +338,12 @@ $fmtData = fn(string $d) => date('d/m', strtotime($d));
 
             <article class="speaker-card" data-speaker>
                 <div class="speaker-head">
-                    <div class="speaker-photo">FG</div>
+                    <?php $f = 'assets/images/palestrantes/flavio.jpg'; ?>
+                    <?php if (file_exists(__DIR__ . '/' . $f)): ?>
+                        <img src="<?= $f ?>" alt="Flávio Roberto de Freitas Gonçalves" class="speaker-photo">
+                    <?php else: ?>
+                        <div class="speaker-photo">FG</div>
+                    <?php endif; ?>
                     <div>
                         <h3>Flávio Roberto de Freitas Gonçalves</h3>
                         <p class="speaker-role">Doutor e pesquisador em tecnologia</p>
