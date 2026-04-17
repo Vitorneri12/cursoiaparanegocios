@@ -342,8 +342,11 @@ $fmtData = fn(string $d) => date('d/m', strtotime($d));
     </div>
 </section>
 
-<section class="section section-light" id="sobre">
+<section class="section section-tg" id="sobre">
     <div class="container">
+        <div class="tg-logo-wrap">
+            <img src="assets/images/logo-texangroup.jpg" alt="Texan Group" class="tg-logo">
+        </div>
         <h2 class="section-title">Sobre a TexanGroup</h2>
         <p class="section-sub">
             Há mais de uma década, a TexanGroup desenvolve soluções em tecnologia e Inteligência Artificial com um único objetivo:
