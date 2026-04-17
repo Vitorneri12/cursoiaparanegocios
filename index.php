@@ -364,7 +364,7 @@ $fmtData = fn(string $d) => date('d/m', strtotime($d));
     </div>
 </section>
 
-<section class="section section-tg" id="sobre">
+<section class="section section-light" id="sobre">
     <div class="container">
         <div class="tg-logo-wrap">
             <img src="assets/images/logo-texangroup.jpg" alt="Texan Group" class="tg-logo">
