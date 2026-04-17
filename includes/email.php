@@ -28,7 +28,7 @@ function enviarEmailConfirmacao(array $insc): bool {
                 <strong>Inclui:</strong> participação na palestra, coffee break, certificado e material apresentado.
             </div>
 
-            <p>Apresente este e-mail (ou um documento com foto) na recepção do evento.</p>
+            <p>Basta apresentar este e-mail (ou um documento com foto) na recepção do evento.</p>
             <p style="margin-top:32px;">Dúvidas: <a href="mailto:contato@texaneduc.com.br">contato@texaneduc.com.br</a></p>
         </div>
         <div style="background:#f5f5f5;padding:16px;text-align:center;color:#888;font-size:12px;">

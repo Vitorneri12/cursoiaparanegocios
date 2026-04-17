@@ -42,8 +42,10 @@ $fmtData = fn(string $d) => date('d/m', strtotime($d));
 
 <header class="topbar">
     <div class="container topbar-inner">
-        <a href="/" class="logo">
+        <a href="/" class="logo logo-group">
             <img src="assets/images/logo.png" alt="TexanEduc">
+            <span class="logo-divider"></span>
+            <img src="assets/images/logo-texangroup.jpg" alt="Texan Group" class="logo-tg">
         </a>
         <div class="topbar-actions">
             <a href="https://wa.me/5519978033293?text=Ol%C3%A1!%20Tenho%20interesse%20na%20palestra%20IA%20PARA%20NEG%C3%93CIOS" target="_blank" rel="noopener" class="btn btn-whatsapp btn-sm">
@@ -60,7 +62,7 @@ $fmtData = fn(string $d) => date('d/m', strtotime($d));
         <div class="hero-text">
             <span class="badge">PALESTRA PRESENCIAL · 09 DE MAIO</span>
             <h1>IA <span class="hl">PARA NEGÓCIOS</span></h1>
-            <p class="lead">Como empresas estão aumentando lucro com Inteligência Artificial — aplicações práticas para você implementar no dia seguinte.</p>
+            <p class="lead">Como empresas estão aumentando o lucro com Inteligência Artificial — aplicações práticas, prontas para implementação imediata em seu negócio.</p>
 
             <ul class="hero-info">
                 <li><strong>Local:</strong> TRYP by Wyndham Ribeirão Preto</li>
@@ -88,7 +90,7 @@ $fmtData = fn(string $d) => date('d/m', strtotime($d));
                         <div class="price-old">De <?= $fmt($preco['preco_maximo']) ?> por</div>
                     <?php endif; ?>
                     <div class="price-value"><?= $fmt($preco['preco']) ?></div>
-                    <div class="price-foot">por participante · em até 3x no cartão</div>
+                    <div class="price-foot">por participante · em até 3x no cartão de crédito</div>
                 <?php endif; ?>
             </div>
 
@@ -102,7 +104,7 @@ $fmtData = fn(string $d) => date('d/m', strtotime($d));
             <?php if (!$preco['esgotado']): ?>
                 <div class="bonus-box">
                     <div class="bonus-tag">🎁 Bônus exclusivo</div>
-                    <p>Participantes terão acesso a uma <strong>avaliação inicial</strong> para identificar onde a IA pode gerar aumento de lucro e redução de custos em sua empresa.</p>
+                    <p>Os participantes terão acesso a uma <strong>avaliação inicial</strong> para identificar em que áreas a IA poderá gerar aumento de lucro e redução de custos em sua empresa.</p>
                 </div>
                 <a href="#inscricao" class="btn btn-primary btn-block">Inscrever-se agora</a>
                 <span class="card-secure">Pagamento seguro via Asaas · PIX ou Cartão</span>
@@ -119,34 +121,34 @@ $fmtData = fn(string $d) => date('d/m', strtotime($d));
             <div class="feature-rich">
                 <div class="feature-num">01</div>
                 <h3>Aumente o faturamento com inteligência, não com esforço</h3>
-                <p>Descubra como empresas estão utilizando Inteligência Artificial para identificar oportunidades escondidas, melhorar conversões e gerar mais receita — sem depender apenas de aumento de equipe ou investimento em mídia.</p>
+                <p>Descubra como empresas estão utilizando a Inteligência Artificial para identificar oportunidades ocultas, melhorar taxas de conversão e ampliar a receita — sem depender exclusivamente de aumento de equipe ou de investimento em mídia.</p>
             </div>
             <div class="feature-rich">
                 <div class="feature-num">02</div>
                 <h3>Reduza custos sem perder eficiência</h3>
-                <p>Identifique onde sua empresa está perdendo dinheiro todos os dias e veja, na prática, como a automação inteligente elimina desperdícios, reduz retrabalho e melhora a produtividade operacional.</p>
+                <p>Identifique onde sua empresa está perdendo recursos diariamente e observe, na prática, como a automação inteligente elimina desperdícios, reduz retrabalhos e eleva a produtividade operacional.</p>
             </div>
             <div class="feature-rich">
                 <div class="feature-num">03</div>
                 <h3>Tome decisões mais rápidas e assertivas</h3>
-                <p>Pare de decidir no "feeling". Aprenda como utilizar dados, análises preditivas e inteligência artificial para tomar decisões com mais segurança, velocidade e impacto financeiro real.</p>
+                <p>Deixe de decidir com base apenas em intuição. Aprenda a utilizar dados, análises preditivas e Inteligência Artificial para tomar decisões com maior segurança, velocidade e impacto financeiro real.</p>
             </div>
             <div class="feature-rich">
                 <div class="feature-num">04</div>
-                <h3>Entenda como aplicar IA no seu negócio (de verdade)</h3>
-                <p>Nada de teoria genérica. Você vai enxergar como implementar IA na sua realidade, independentemente do seu setor — com exemplos práticos de empresas que já estão colhendo resultados.</p>
+                <h3>Entenda como aplicar IA em seu negócio de forma concreta</h3>
+                <p>Sem teoria genérica. Você compreenderá como implementar a Inteligência Artificial na realidade de sua empresa, independentemente do setor — com exemplos práticos de organizações que já estão colhendo resultados.</p>
             </div>
             <div class="feature-rich feature-wide">
                 <div class="feature-num">05</div>
-                <h3>Tenha vantagem competitiva no seu mercado</h3>
-                <p>Enquanto muitas empresas ainda estão "estudando IA", outras já estão ganhando mais, gastando menos e tomando decisões melhores. Esta palestra mostra exatamente como não ficar para trás.</p>
+                <h3>Conquiste vantagem competitiva em seu mercado</h3>
+                <p>Enquanto muitas empresas ainda estudam a Inteligência Artificial, outras já aumentam receitas, reduzem despesas e tomam decisões mais acertadas. Esta palestra demonstra, com precisão, como não ficar para trás.</p>
             </div>
         </div>
 
         <div class="impact-box">
-            <p>Empresas não perdem dinheiro por falta de sistema…</p>
+            <p>Empresas não perdem dinheiro por falta de sistemas…</p>
             <p><strong>Perdem por falta de decisão.</strong></p>
-            <p class="muted">Se sua empresa ainda não usa Inteligência Artificial de forma estratégica, você já está competindo em desvantagem.</p>
+            <p class="muted">Se sua empresa ainda não utiliza a Inteligência Artificial de forma estratégica, já está competindo em posição de desvantagem.</p>
         </div>
     </div>
 </section>
@@ -154,41 +156,41 @@ $fmtData = fn(string $d) => date('d/m', strtotime($d));
 <section class="section" id="para-quem">
     <div class="container">
         <h2 class="section-title">Para quem é esta palestra</h2>
-        <p class="section-sub">Se sua empresa gera dados, existe dinheiro escondido que você ainda não está vendo.</p>
+        <p class="section-sub">Se sua empresa gera dados, há valor oculto que ainda não está sendo aproveitado.</p>
 
         <div class="grid grid-3">
             <div class="audience-card">
-                <h3>Empresários e donos de empresa</h3>
-                <p>Que sentem que poderiam estar faturando mais, mas não têm clareza de onde estão perdendo dinheiro ou como escalar o negócio com eficiência.</p>
+                <h3>Empresários e proprietários de empresas</h3>
+                <p>Que percebem o potencial de maior faturamento, mas não identificam com clareza onde estão as perdas ou como escalar o negócio de forma eficiente.</p>
             </div>
             <div class="audience-card">
                 <h3>Diretores e executivos</h3>
-                <p>Que precisam tomar decisões rápidas e estratégicas, mas ainda não utilizam dados e IA como vantagem competitiva no dia a dia.</p>
+                <p>Que precisam tomar decisões rápidas e estratégicas, mas ainda não utilizam dados e Inteligência Artificial como vantagem competitiva no cotidiano.</p>
             </div>
             <div class="audience-card">
                 <h3>Gestores industriais</h3>
-                <p>Que enfrentam desafios de produtividade, desperdício e eficiência operacional — e buscam soluções práticas para reduzir custo e melhorar performance.</p>
+                <p>Que enfrentam desafios de produtividade, desperdício e eficiência operacional — e buscam soluções práticas para reduzir custos e elevar a performance.</p>
             </div>
             <div class="audience-card">
                 <h3>Profissionais do agronegócio</h3>
-                <p>Produtores, gestores e líderes que querem utilizar tecnologia para tomar decisões mais inteligentes sobre produção, safra e rentabilidade.</p>
+                <p>Produtores, gestores e líderes que desejam utilizar a tecnologia para tomar decisões mais inteligentes sobre produção, safra e rentabilidade.</p>
             </div>
             <div class="audience-card">
                 <h3>Usinas e cooperativas</h3>
-                <p>Que lidam com operações complexas e precisam aumentar eficiência, previsibilidade e controle — transformando dados em decisões financeiras melhores.</p>
+                <p>Que lidam com operações complexas e precisam elevar a eficiência, a previsibilidade e o controle — transformando dados em decisões financeiras mais acertadas.</p>
             </div>
             <div class="audience-card">
                 <h3>Empresas de serviços</h3>
-                <p>Que desejam automatizar atendimento, melhorar processos internos e aumentar resultado sem aumentar estrutura.</p>
+                <p>Que desejam automatizar o atendimento, aprimorar processos internos e ampliar resultados sem expandir a estrutura.</p>
             </div>
         </div>
 
-        <div class="impact-box impact-yellow impact-big">
+        <div class="impact-box impact-big">
             <p class="impact-head">Esta palestra é para quem</p>
             <ul>
-                <li>QUER AUMENTAR FATURAMENTO</li>
-                <li>PRECISA REDUZIR CUSTOS</li>
-                <li>ENTENDE QUE DECISÃO BASEADA EM DADOS NÃO É MAIS OPCIONAL</li>
+                <li>Deseja aumentar o faturamento</li>
+                <li>Precisa reduzir custos</li>
+                <li>Compreende que a decisão baseada em dados deixou de ser opcional</li>
             </ul>
         </div>
     </div>
@@ -223,7 +225,7 @@ $fmtData = fn(string $d) => date('d/m', strtotime($d));
                 <div class="time-hour">12h30</div>
                 <div class="time-body">
                     <h4>Almoço · Networking (1h30)</h4>
-                    <p>Tempo para relacionamento entre participantes.</p>
+                    <p>Momento destinado à interação entre os participantes.</p>
                 </div>
             </div>
             <div class="time-item">
@@ -260,7 +262,7 @@ $fmtData = fn(string $d) => date('d/m', strtotime($d));
 <section class="section" id="palestrantes">
     <div class="container">
         <h2 class="section-title">Palestrantes</h2>
-        <p class="section-sub">Profissionais com experiência prática em IA aplicada aos negócios.</p>
+        <p class="section-sub">Profissionais com sólida experiência prática em Inteligência Artificial aplicada aos negócios.</p>
 
         <div class="grid grid-2">
             <article class="speaker-card" data-speaker>
@@ -276,11 +278,11 @@ $fmtData = fn(string $d) => date('d/m', strtotime($d));
                         <p class="speaker-role">CEO da TexanGroup</p>
                     </div>
                 </div>
-                <p class="speaker-short">Empresário e especialista em Inteligência Artificial aplicada a negócios, com mais de 20 anos de experiência em transformação digital, automação e análise de dados em larga escala.</p>
+                <p class="speaker-short">Empresário e especialista em Inteligência Artificial aplicada aos negócios, com mais de 20 anos de experiência em transformação digital, automação e análise de dados em larga escala.</p>
                 <div class="speaker-full" hidden>
-                    <p>À frente da TexanGroup, lidera o desenvolvimento de soluções de IA proprietária voltadas para empresas que buscam aumentar faturamento, reduzir custos e tomar decisões mais assertivas.</p>
-                    <p>Sua trajetória inclui participação em projetos estratégicos no Brasil e no exterior, envolvendo governo, indústria, agronegócio e plataformas digitais, sempre com foco na aplicação prática da tecnologia como diferencial competitivo.</p>
-                    <p>Hoje, seu trabalho está centrado na construção de sistemas inteligentes que transformam dados em decisões, permitindo que empresas operem com maior eficiência, previsibilidade e escala.</p>
+                    <p>À frente da TexanGroup, lidera o desenvolvimento de soluções proprietárias de Inteligência Artificial voltadas a empresas que buscam aumentar o faturamento, reduzir custos e tomar decisões mais assertivas.</p>
+                    <p>Sua trajetória inclui participação em projetos estratégicos no Brasil e no exterior, envolvendo órgãos governamentais, indústria, agronegócio e plataformas digitais, sempre com foco na aplicação prática da tecnologia como diferencial competitivo.</p>
+                    <p>Atualmente, seu trabalho está centrado na construção de sistemas inteligentes que transformam dados em decisões, permitindo que empresas operem com maior eficiência, previsibilidade e escala.</p>
                 </div>
                 <div class="speaker-actions">
                     <button type="button" class="link-more" data-toggle>Ler mais ↓</button>
@@ -301,10 +303,10 @@ $fmtData = fn(string $d) => date('d/m', strtotime($d));
                         <p class="speaker-role">Tecnologia e desenvolvimento de sistemas</p>
                     </div>
                 </div>
-                <p class="speaker-short">Profissional com sólida experiência em tecnologia e desenvolvimento de sistemas, atuando na construção de soluções digitais voltadas à eficiência operacional e à transformação de processos empresariais.</p>
+                <p class="speaker-short">Profissional com sólida experiência em tecnologia e desenvolvimento de sistemas, atua na construção de soluções digitais voltadas à eficiência operacional e à transformação de processos empresariais.</p>
                 <div class="speaker-full" hidden>
-                    <p>Com forte atuação prática, participa de projetos que envolvem integração de sistemas, automação e desenvolvimento de aplicações estratégicas, contribuindo diretamente para a evolução tecnológica de empresas em diferentes segmentos.</p>
-                    <p>Seu trabalho está focado na aplicação de tecnologia de forma estruturada e orientada a resultado, conectando sistemas e dados para gerar maior produtividade e controle operacional.</p>
+                    <p>Com expressiva atuação prática, participa de projetos que envolvem integração de sistemas, automação e desenvolvimento de aplicações estratégicas, contribuindo diretamente para a evolução tecnológica de empresas de diversos segmentos.</p>
+                    <p>Seu trabalho está concentrado na aplicação da tecnologia de forma estruturada e orientada a resultados, conectando sistemas e dados para gerar maior produtividade e controle operacional.</p>
                 </div>
                 <div class="speaker-actions">
                     <button type="button" class="link-more" data-toggle>Ler mais ↓</button>
@@ -325,10 +327,10 @@ $fmtData = fn(string $d) => date('d/m', strtotime($d));
                         <p class="speaker-role">Dados e soluções inteligentes</p>
                     </div>
                 </div>
-                <p class="speaker-short">Especialista em dados, tecnologia e desenvolvimento de soluções inteligentes, atua na construção de ambientes orientados à análise de dados e tomada de decisão estratégica.</p>
+                <p class="speaker-short">Especialista em dados, tecnologia e desenvolvimento de soluções inteligentes, atua na construção de ambientes orientados à análise de dados e à tomada de decisão estratégica.</p>
                 <div class="speaker-full" hidden>
-                    <p>Com experiência em projetos envolvendo inteligência de dados, integração de sistemas e automação, trabalha diretamente na criação de estruturas que permitem às empresas extrair valor real das informações disponíveis.</p>
-                    <p>Sua atuação é voltada para transformar dados em ativos estratégicos, contribuindo para aumento de performance, eficiência e competitividade empresarial.</p>
+                    <p>Com experiência em projetos que envolvem inteligência de dados, integração de sistemas e automação, trabalha diretamente na criação de estruturas que permitem às empresas extrair valor real das informações disponíveis.</p>
+                    <p>Sua atuação volta-se à transformação de dados em ativos estratégicos, contribuindo para o aumento da performance, da eficiência e da competitividade empresarial.</p>
                 </div>
                 <div class="speaker-actions">
                     <button type="button" class="link-more" data-toggle>Ler mais ↓</button>
@@ -349,9 +351,9 @@ $fmtData = fn(string $d) => date('d/m', strtotime($d));
                         <p class="speaker-role">Doutor e pesquisador em tecnologia</p>
                     </div>
                 </div>
-                <p class="speaker-short">Doutor e pesquisador com atuação na área de tecnologia e inovação, com experiência acadêmica e científica voltada ao desenvolvimento de soluções avançadas e aplicação de conhecimento técnico em contextos reais.</p>
+                <p class="speaker-short">Doutor e pesquisador com atuação na área de tecnologia e inovação, possui experiência acadêmica e científica voltada ao desenvolvimento de soluções avançadas e à aplicação de conhecimento técnico em contextos reais.</p>
                 <div class="speaker-full" hidden>
-                    <p>Sua atuação contribui para a formação de profissionais com base sólida, conectando teoria e prática no uso de tecnologias emergentes como Inteligência Artificial.</p>
+                    <p>Sua atuação contribui para a formação de profissionais com base sólida, conectando teoria e prática no uso de tecnologias emergentes, como a Inteligência Artificial.</p>
                 </div>
                 <div class="speaker-actions">
                     <button type="button" class="link-more" data-toggle>Ler mais ↓</button>
@@ -370,32 +372,32 @@ $fmtData = fn(string $d) => date('d/m', strtotime($d));
         <h2 class="section-title">Sobre a TexanGroup</h2>
         <p class="section-sub">
             Há mais de uma década, a TexanGroup desenvolve soluções em tecnologia e Inteligência Artificial com um único objetivo:
-            <strong>aumentar lucro, reduzir custos e melhorar a tomada de decisão das empresas.</strong>
+            <strong>aumentar o lucro, reduzir custos e aprimorar a tomada de decisão das empresas.</strong>
         </p>
 
         <p class="section-text">
-            Mais do que desenvolver sistemas, a TexanGroup atua na construção de um ecossistema inteligente, onde dados, processos e tecnologia trabalham juntos para gerar resultado real.
+            Mais do que desenvolver sistemas, a TexanGroup atua na construção de um ecossistema inteligente, no qual dados, processos e tecnologia operam de forma integrada para gerar resultados reais.
         </p>
 
         <div class="grid grid-3">
             <div class="feature">
                 <h3>Tecnologia aplicada ao resultado</h3>
-                <p>Sistemas, automações e plataformas digitais que vão além da operação — estruturam o negócio para crescer com eficiência. Atuamos em indústria, agronegócio, usinas e serviços.</p>
+                <p>Sistemas, automações e plataformas digitais que transcendem a operação — estruturam o negócio para crescer com eficiência. Atuamos nos segmentos de indústria, agronegócio, usinas e serviços.</p>
             </div>
             <div class="feature">
                 <h3>IA como motor de decisão</h3>
-                <p>Não usamos IA como tendência, mas como ferramenta estratégica de negócio: IA generativa, agentes autônomos, análise preditiva e automação inteligente — orientadas para impactar o resultado financeiro.</p>
+                <p>Não adotamos a Inteligência Artificial como tendência, mas como ferramenta estratégica de negócio: IA generativa, agentes autônomos, análise preditiva e automação inteligente — orientadas a impactar o resultado financeiro.</p>
             </div>
             <div class="feature">
                 <h3>Parceria estratégica de longo prazo</h3>
-                <p>Atuamos como parceiro estratégico, lado a lado com empresários, diretores e equipes técnicas. Nosso compromisso não é entregar tecnologia — é entregar resultado real e contínuo.</p>
+                <p>Atuamos como parceiros estratégicos, lado a lado com empresários, diretores e equipes técnicas. Nosso compromisso não é apenas entregar tecnologia, mas entregar resultados reais e contínuos.</p>
             </div>
         </div>
 
         <div class="impact-box">
-            <p>Acreditamos que empresas não precisam de mais sistemas…</p>
-            <p><strong>Precisam de melhores decisões.</strong></p>
-            <p class="muted">E é exatamente isso que a TexanGroup constrói.</p>
+            <p>Acreditamos que as empresas não precisam de mais sistemas…</p>
+            <p><strong>Precisam de decisões melhores.</strong></p>
+            <p class="muted">E é precisamente isso que a TexanGroup constrói.</p>
         </div>
 
         <div class="sobre-cta">
@@ -409,19 +411,18 @@ $fmtData = fn(string $d) => date('d/m', strtotime($d));
         <h2 class="section-title">Garanta sua vaga</h2>
 
         <?php if ($preco['esgotado']): ?>
-            <p class="section-sub">Todas as vagas foram preenchidas. Deixe seu contato em contato@texaneduc.com.br para a próxima turma.</p>
+            <p class="section-sub">Todas as vagas foram preenchidas. Registre seu contato em contato@texaneduc.com.br para receber informações sobre a próxima turma.</p>
         <?php else: ?>
             <p class="section-sub">
-                Restam <strong><?= $preco['vagas_lote'] ?> vagas</strong> no <strong><?= htmlspecialchars($preco['nome_lote']) ?></strong> por <?= $fmt($preco['preco']) ?>.
+                Restam <strong><?= $preco['vagas_lote'] ?> vagas</strong> no <strong><?= htmlspecialchars($preco['nome_lote']) ?></strong>, pelo valor de <?= $fmt($preco['preco']) ?>.
                 <?php
-                // Acha o proximo lote (se existir)
                 $proximoPreco = null;
                 foreach ($preco['lotes'] as $l) {
                     if ($l['preco'] > $preco['preco']) { $proximoPreco = $l['preco']; break; }
                 }
                 ?>
                 <?php if ($proximoPreco): ?>
-                    Após o encerramento deste lote, o valor passa para <?= $fmt($proximoPreco) ?>.
+                    Após o encerramento deste lote, o investimento passará a ser de <?= $fmt($proximoPreco) ?>.
                 <?php endif; ?>
             </p>
 
@@ -436,17 +437,17 @@ $fmtData = fn(string $d) => date('d/m', strtotime($d));
 
                 <ul class="cta-includes">
                     <li>Acesso completo à palestra presencial</li>
-                    <li>Coffee break incluso</li>
+                    <li>Coffee break</li>
                     <li>Certificado de participação</li>
                     <li>Bônus: avaliação inicial de IA para sua empresa</li>
                 </ul>
 
                 <div class="cta-warn">
-                    <strong>Atenção:</strong> as vagas são limitadas e preenchidas por ordem de inscrição. O lote atual pode ser encerrado a qualquer momento.
+                    <strong>Atenção:</strong> as vagas são limitadas e preenchidas por ordem de inscrição. O lote vigente poderá ser encerrado a qualquer momento.
                 </div>
 
-                <a href="checkout.php" class="btn btn-primary btn-lg btn-block">Inscrever-me agora</a>
-                <p class="cta-note">Pagamento via PIX ou Cartão de Crédito (até 3x) · Processamento seguro via Asaas</p>
+                <a href="checkout.php" class="btn btn-primary btn-lg btn-block">Quero me inscrever agora</a>
+                <p class="cta-note">Pagamento via PIX ou Cartão de Crédito (em até 3x) · Processamento seguro pela Asaas</p>
             </div>
         <?php endif; ?>
     </div>
