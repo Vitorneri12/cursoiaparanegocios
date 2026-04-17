@@ -42,12 +42,8 @@ $fmtData = fn(string $d) => date('d/m', strtotime($d));
 
 <header class="topbar">
     <div class="container topbar-inner">
-        <a href="/" class="logo logo-group">
+        <a href="/" class="logo">
             <img src="assets/images/logo.png" alt="TexanEduc">
-            <span class="logo-by">por</span>
-            <span class="logo-tg-wrap">
-                <img src="assets/images/logo-texangroup.png" alt="Texan Group">
-            </span>
         </a>
         <div class="topbar-actions">
             <a href="https://wa.me/5519978033293?text=Ol%C3%A1!%20Tenho%20interesse%20na%20palestra%20IA%20PARA%20NEG%C3%93CIOS" target="_blank" rel="noopener" class="btn btn-whatsapp btn-sm">
@@ -109,7 +105,7 @@ $fmtData = fn(string $d) => date('d/m', strtotime($d));
                     <p>Participantes terão acesso a uma <strong>avaliação inicial</strong> para identificar onde a IA pode gerar aumento de lucro e redução de custos em sua empresa.</p>
                 </div>
                 <a href="#inscricao" class="btn btn-primary btn-block">Inscrever-se agora</a>
-                <span class="card-secure">🔒 Pagamento seguro via Asaas · PIX ou Cartão</span>
+                <span class="card-secure">Pagamento seguro via Asaas · PIX ou Cartão</span>
             <?php endif; ?>
         </div>
     </div>
@@ -121,27 +117,27 @@ $fmtData = fn(string $d) => date('d/m', strtotime($d));
 
         <div class="grid grid-2">
             <div class="feature-rich">
-                <div class="feature-ico">💰</div>
+                <div class="feature-num">01</div>
                 <h3>Aumente o faturamento com inteligência, não com esforço</h3>
                 <p>Descubra como empresas estão utilizando Inteligência Artificial para identificar oportunidades escondidas, melhorar conversões e gerar mais receita — sem depender apenas de aumento de equipe ou investimento em mídia.</p>
             </div>
             <div class="feature-rich">
-                <div class="feature-ico">⚙️</div>
+                <div class="feature-num">02</div>
                 <h3>Reduza custos sem perder eficiência</h3>
                 <p>Identifique onde sua empresa está perdendo dinheiro todos os dias e veja, na prática, como a automação inteligente elimina desperdícios, reduz retrabalho e melhora a produtividade operacional.</p>
             </div>
             <div class="feature-rich">
-                <div class="feature-ico">🎯</div>
+                <div class="feature-num">03</div>
                 <h3>Tome decisões mais rápidas e assertivas</h3>
                 <p>Pare de decidir no "feeling". Aprenda como utilizar dados, análises preditivas e inteligência artificial para tomar decisões com mais segurança, velocidade e impacto financeiro real.</p>
             </div>
             <div class="feature-rich">
-                <div class="feature-ico">🧠</div>
+                <div class="feature-num">04</div>
                 <h3>Entenda como aplicar IA no seu negócio (de verdade)</h3>
                 <p>Nada de teoria genérica. Você vai enxergar como implementar IA na sua realidade, independentemente do seu setor — com exemplos práticos de empresas que já estão colhendo resultados.</p>
             </div>
             <div class="feature-rich feature-wide">
-                <div class="feature-ico">📈</div>
+                <div class="feature-num">05</div>
                 <h3>Tenha vantagem competitiva no seu mercado</h3>
                 <p>Enquanto muitas empresas ainda estão "estudando IA", outras já estão ganhando mais, gastando menos e tomando decisões melhores. Esta palestra mostra exatamente como não ficar para trás.</p>
             </div>
@@ -162,32 +158,26 @@ $fmtData = fn(string $d) => date('d/m', strtotime($d));
 
         <div class="grid grid-3">
             <div class="audience-card">
-                <div class="audience-ico">👨‍💼</div>
                 <h3>Empresários e donos de empresa</h3>
                 <p>Que sentem que poderiam estar faturando mais, mas não têm clareza de onde estão perdendo dinheiro ou como escalar o negócio com eficiência.</p>
             </div>
             <div class="audience-card">
-                <div class="audience-ico">🧠</div>
                 <h3>Diretores e executivos</h3>
                 <p>Que precisam tomar decisões rápidas e estratégicas, mas ainda não utilizam dados e IA como vantagem competitiva no dia a dia.</p>
             </div>
             <div class="audience-card">
-                <div class="audience-ico">🏭</div>
                 <h3>Gestores industriais</h3>
                 <p>Que enfrentam desafios de produtividade, desperdício e eficiência operacional — e buscam soluções práticas para reduzir custo e melhorar performance.</p>
             </div>
             <div class="audience-card">
-                <div class="audience-ico">🌱</div>
                 <h3>Profissionais do agronegócio</h3>
                 <p>Produtores, gestores e líderes que querem utilizar tecnologia para tomar decisões mais inteligentes sobre produção, safra e rentabilidade.</p>
             </div>
             <div class="audience-card">
-                <div class="audience-ico">⚡</div>
                 <h3>Usinas e cooperativas</h3>
                 <p>Que lidam com operações complexas e precisam aumentar eficiência, previsibilidade e controle — transformando dados em decisões financeiras melhores.</p>
             </div>
             <div class="audience-card">
-                <div class="audience-ico">🏢</div>
                 <h3>Empresas de serviços</h3>
                 <p>Que desejam automatizar atendimento, melhorar processos internos e aumentar resultado sem aumentar estrutura.</p>
             </div>
@@ -196,9 +186,9 @@ $fmtData = fn(string $d) => date('d/m', strtotime($d));
         <div class="impact-box impact-yellow">
             <p>Esta palestra é para quem:</p>
             <ul>
-                <li>✓ Quer aumentar faturamento</li>
-                <li>✓ Precisa reduzir custos</li>
-                <li>✓ Entende que decisão baseada em dados não é mais opcional</li>
+                <li>Quer aumentar faturamento</li>
+                <li>Precisa reduzir custos</li>
+                <li>Entende que decisão baseada em dados não é mais opcional</li>
             </ul>
         </div>
     </div>
@@ -289,7 +279,7 @@ $fmtData = fn(string $d) => date('d/m', strtotime($d));
                 </div>
                 <div class="speaker-actions">
                     <button type="button" class="link-more" data-toggle>Ler mais ↓</button>
-                    <a href="https://www.linkedin.com/in/higorgimenes" target="_blank" rel="noopener" class="link-li">🔗 LinkedIn</a>
+                    <a href="https://www.linkedin.com/in/higorgimenes" target="_blank" rel="noopener" class="link-li">LinkedIn →</a>
                 </div>
             </article>
 
@@ -308,7 +298,7 @@ $fmtData = fn(string $d) => date('d/m', strtotime($d));
                 </div>
                 <div class="speaker-actions">
                     <button type="button" class="link-more" data-toggle>Ler mais ↓</button>
-                    <a href="https://www.linkedin.com/in/claudio-soldera" target="_blank" rel="noopener" class="link-li">🔗 LinkedIn</a>
+                    <a href="https://www.linkedin.com/in/claudio-soldera" target="_blank" rel="noopener" class="link-li">LinkedIn →</a>
                 </div>
             </article>
 
@@ -327,7 +317,7 @@ $fmtData = fn(string $d) => date('d/m', strtotime($d));
                 </div>
                 <div class="speaker-actions">
                     <button type="button" class="link-more" data-toggle>Ler mais ↓</button>
-                    <a href="https://www.linkedin.com/in/guilherme-cabreira" target="_blank" rel="noopener" class="link-li">🔗 LinkedIn</a>
+                    <a href="https://www.linkedin.com/in/guilherme-cabreira" target="_blank" rel="noopener" class="link-li">LinkedIn →</a>
                 </div>
             </article>
 
@@ -345,7 +335,7 @@ $fmtData = fn(string $d) => date('d/m', strtotime($d));
                 </div>
                 <div class="speaker-actions">
                     <button type="button" class="link-more" data-toggle>Ler mais ↓</button>
-                    <a href="http://lattes.cnpq.br" target="_blank" rel="noopener" class="link-li">🔗 Lattes</a>
+                    <a href="http://lattes.cnpq.br" target="_blank" rel="noopener" class="link-li">Lattes →</a>
                 </div>
             </article>
         </div>
@@ -366,17 +356,14 @@ $fmtData = fn(string $d) => date('d/m', strtotime($d));
 
         <div class="grid grid-3">
             <div class="feature">
-                <div class="feature-ico">🚀</div>
                 <h3>Tecnologia aplicada ao resultado</h3>
                 <p>Sistemas, automações e plataformas digitais que vão além da operação — estruturam o negócio para crescer com eficiência. Atuamos em indústria, agronegócio, usinas e serviços.</p>
             </div>
             <div class="feature">
-                <div class="feature-ico">🧠</div>
                 <h3>IA como motor de decisão</h3>
                 <p>Não usamos IA como tendência, mas como ferramenta estratégica de negócio: IA generativa, agentes autônomos, análise preditiva e automação inteligente — orientadas para impactar o resultado financeiro.</p>
             </div>
             <div class="feature">
-                <div class="feature-ico">🤝</div>
                 <h3>Parceria estratégica de longo prazo</h3>
                 <p>Atuamos como parceiro estratégico, lado a lado com empresários, diretores e equipes técnicas. Nosso compromisso não é entregar tecnologia — é entregar resultado real e contínuo.</p>
             </div>
@@ -425,14 +412,14 @@ $fmtData = fn(string $d) => date('d/m', strtotime($d));
                 </div>
 
                 <ul class="cta-includes">
-                    <li>🚀 Acesso completo à palestra presencial</li>
-                    <li>☕ Coffee break incluso</li>
-                    <li>🎓 Certificado de participação</li>
-                    <li>🎁 Bônus: avaliação inicial de IA para sua empresa</li>
+                    <li>Acesso completo à palestra presencial</li>
+                    <li>Coffee break incluso</li>
+                    <li>Certificado de participação</li>
+                    <li>Bônus: avaliação inicial de IA para sua empresa</li>
                 </ul>
 
                 <div class="cta-warn">
-                    <strong>⚠️ Atenção:</strong> as vagas são limitadas e preenchidas por ordem de inscrição. O lote atual pode ser encerrado a qualquer momento.
+                    <strong>Atenção:</strong> as vagas são limitadas e preenchidas por ordem de inscrição. O lote atual pode ser encerrado a qualquer momento.
                 </div>
 
                 <a href="checkout.php" class="btn btn-primary btn-lg btn-block">Inscrever-me agora</a>
@@ -447,7 +434,10 @@ $fmtData = fn(string $d) => date('d/m', strtotime($d));
         <div class="footer-brand">
             <img src="assets/images/logo.png" alt="TexanEduc" class="footer-logo">
             <p>Soluções em Tecnologia e Inteligência Artificial</p>
-            <p class="footer-tag">Uma iniciativa <a href="https://www.texangroup.com.br" target="_blank" rel="noopener"><strong>Texan Group</strong></a></p>
+            <p class="footer-tag">Uma iniciativa</p>
+            <a href="https://www.texangroup.com.br" target="_blank" rel="noopener" class="footer-tg">
+                <img src="assets/images/logo-texangroup.jpg" alt="Texan Group">
+            </a>
         </div>
         <div class="footer-info">
             <p><strong>Endereço:</strong> Ricardo Benetton Martins, 1000 — Parque II do Polo de Tecnologia, Prédio 9A, Campinas-SP — CEP 13086-902</p>
