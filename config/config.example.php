@@ -21,15 +21,17 @@ return [
     ],
 
     'evento' => [
-        'nome'           => 'IA PARA NEGÓCIOS',
-        'data'           => '09 de maio',
-        'local'          => 'TRYP by Wyndham Ribeirão Preto',
-        'horario'        => '09h30 às 16h00',
-        'vagas_total'    => 100,
-        'vagas_promo'    => 30,
-        'preco_promo'    => 999.90,
-        'preco_normal'   => 1200.00,
-        'parcelas_max'   => 5,
+        'nome'         => 'IA PARA NEGÓCIOS',
+        'data'         => '09 de maio',
+        'local'        => 'TRYP by Wyndham Ribeirão Preto',
+        'horario'      => '09h30 às 16h00',
+        'vagas_total'  => 100,
+        'parcelas_max' => 3,
+        'lotes' => [
+            ['nome' => 'Lote 1 — Lançamento',     'preco' => 999.00,  'vagas' => 30, 'inicio' => '2026-04-17', 'fim' => '2026-04-23'],
+            ['nome' => 'Lote 2 — Intermediário',  'preco' => 1297.00, 'vagas' => 40, 'inicio' => '2026-04-24', 'fim' => '2026-05-02'],
+            ['nome' => 'Lote 3 — Final',          'preco' => 1560.00, 'vagas' => 30, 'inicio' => '2026-05-03', 'fim' => '2026-05-08'],
+        ],
     ],
 
     // Taxas Asaas para cartao de credito (repassadas ao cliente).
@@ -45,8 +47,6 @@ return [
             1 => 0.0199,
             2 => 0.0299,
             3 => 0.0299,
-            4 => 0.0299,
-            5 => 0.0299,
         ],
     ],
 

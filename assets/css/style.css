@@ -76,7 +76,31 @@ img { max-width: 100%; display: block; }
     padding: 16px 20px;
     gap: 16px;
 }
-.logo img { height: 64px; width: auto; }
+.logo img { height: 80px; width: auto; }
+.logo-group {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+.logo-by {
+    font-size: 11px;
+    color: var(--cinza);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+.logo-tg-wrap {
+    background: var(--preto);
+    padding: 8px 14px;
+    border-radius: 8px;
+    display: inline-flex;
+    align-items: center;
+    height: 48px;
+}
+.logo-tg-wrap img {
+    height: 28px !important;
+    width: auto;
+}
 .topbar-actions {
     display: flex;
     align-items: center;
@@ -608,6 +632,176 @@ h4.mt { font-size: 14px; color: var(--preto); margin-bottom: 12px; }
     font-size: 14px;
 }
 
+/* ===== Bonus box (hero) ===== */
+.bonus-box {
+    background: linear-gradient(135deg, #fff8e1 0%, #fff3c4 100%);
+    border: 1px dashed var(--amarelo-escuro);
+    border-radius: 10px;
+    padding: 16px;
+    margin: 16px 0;
+}
+.bonus-tag {
+    font-weight: 800;
+    color: var(--amarelo-escuro);
+    font-size: 14px;
+    margin-bottom: 6px;
+}
+.bonus-box p { font-size: 13px; color: var(--cinza-escuro); margin: 0; }
+
+/* ===== Feature rich (por que participar) ===== */
+.grid-2 { grid-template-columns: 1fr 1fr; }
+.feature-rich {
+    background: var(--branco);
+    padding: 28px;
+    border-radius: 12px;
+    box-shadow: var(--sombra);
+    border-left: 4px solid var(--amarelo);
+}
+.feature-rich h3 {
+    color: var(--preto);
+    font-size: 18px;
+    margin-bottom: 10px;
+    line-height: 1.3;
+}
+.feature-rich p { color: var(--cinza); font-size: 14px; }
+.feature-wide { grid-column: 1 / -1; }
+
+/* ===== Audience cards (para quem) ===== */
+.audience-card {
+    background: var(--cinza-claro);
+    padding: 24px;
+    border-radius: 12px;
+    transition: transform .15s, box-shadow .15s;
+}
+.audience-card:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--sombra);
+    background: var(--branco);
+}
+.audience-ico { font-size: 32px; margin-bottom: 12px; }
+.audience-card h3 { color: var(--preto); font-size: 16px; margin-bottom: 8px; }
+.audience-card p { color: var(--cinza); font-size: 13px; }
+
+/* ===== Impact box ===== */
+.impact-box {
+    background: var(--preto);
+    color: var(--branco);
+    padding: 32px;
+    border-radius: 12px;
+    text-align: center;
+    margin-top: 40px;
+    border-left: 4px solid var(--amarelo);
+}
+.impact-box p { font-size: 18px; margin-bottom: 8px; }
+.impact-box p strong { color: var(--amarelo); font-size: 22px; }
+.impact-box .muted { color: rgba(255,255,255,.7) !important; font-size: 14px; margin-top: 12px; }
+.impact-box ul { list-style: none; margin-top: 12px; padding: 0; }
+.impact-box ul li { padding: 6px 0; font-size: 16px; color: var(--branco); }
+.impact-yellow {
+    background: linear-gradient(135deg, #fbc02d 0%, #f9a825 100%);
+    color: var(--preto);
+    border-left: none;
+}
+.impact-yellow p, .impact-yellow ul li { color: var(--preto); }
+.impact-yellow p strong { color: var(--preto); font-size: 24px; }
+
+/* ===== Section text ===== */
+.section-text {
+    text-align: center;
+    max-width: 720px;
+    margin: 0 auto 40px;
+    color: var(--cinza-escuro);
+    font-size: 16px;
+}
+
+/* ===== Speaker cards ===== */
+.speaker-card {
+    background: var(--branco);
+    padding: 28px;
+    border-radius: 12px;
+    box-shadow: var(--sombra);
+    border-top: 3px solid var(--amarelo);
+    display: flex;
+    flex-direction: column;
+}
+.speaker-head {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 16px;
+}
+.speaker-card .speaker-photo {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #fbc02d, #f9a825);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 800;
+    color: var(--preto);
+    font-size: 22px;
+    flex-shrink: 0;
+}
+.speaker-card h3 { color: var(--preto); font-size: 17px; margin-bottom: 2px; line-height: 1.2; }
+.speaker-card .speaker-role { color: var(--amarelo-escuro); font-size: 13px; font-weight: 700; }
+.speaker-short { color: var(--cinza-escuro); font-size: 14px; line-height: 1.6; }
+.speaker-full { color: var(--cinza); font-size: 14px; margin-top: 12px; }
+.speaker-full p { margin-bottom: 10px; }
+.speaker-actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: auto;
+    padding-top: 16px;
+    gap: 12px;
+}
+.link-more {
+    background: none;
+    border: none;
+    color: var(--amarelo-escuro);
+    font-weight: 700;
+    cursor: pointer;
+    font-size: 13px;
+    padding: 0;
+    font-family: inherit;
+}
+.link-more:hover { text-decoration: underline; }
+.link-li {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    color: var(--cinza-escuro);
+    font-size: 13px;
+    font-weight: 600;
+}
+.link-li:hover { color: var(--amarelo-escuro); }
+
+/* ===== CTA includes/warn ===== */
+.cta-includes {
+    list-style: none;
+    margin: 20px 0;
+    text-align: left;
+    padding: 0;
+}
+.cta-includes li {
+    padding: 8px 0;
+    font-size: 14px;
+    color: var(--cinza-escuro);
+    border-bottom: 1px solid var(--cinza-borda);
+}
+.cta-includes li:last-child { border-bottom: none; }
+.cta-warn {
+    background: #fff5f5;
+    border-left: 4px solid var(--vermelho);
+    padding: 12px 16px;
+    border-radius: 6px;
+    margin-bottom: 20px;
+    text-align: left;
+    font-size: 13px;
+    color: var(--cinza-escuro);
+}
+
 /* ===== Responsive ===== */
 @media (max-width: 880px) {
     .hero { padding: 56px 0; }
@@ -623,8 +817,15 @@ h4.mt { font-size: 14px; color: var(--preto); margin-bottom: 12px; }
     .checkout-form { padding: 24px; }
     .section { padding: 56px 0; }
     .time-item { grid-template-columns: 80px 1fr; gap: 16px; }
-    .logo img { height: 48px; }
+    .logo img { height: 52px; }
+    .logo-by { display: none; }
+    .logo-tg-wrap { padding: 6px 10px; height: 36px; }
+    .logo-tg-wrap img { height: 22px !important; }
     .footer-logo { height: 56px; }
+    .grid-2 { grid-template-columns: 1fr; }
+    .speaker-card { padding: 20px; }
+    .impact-box { padding: 24px 20px; }
+    .impact-box p { font-size: 16px; }
     .topbar-inner { padding: 12px 16px; }
     .btn-sm { padding: 8px 12px; font-size: 13px; }
     .btn-whatsapp svg { width: 14px; height: 14px; }

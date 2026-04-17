@@ -44,24 +44,79 @@ function valorComTaxaCartao(float $valorBase, int $parcelas): array {
     ];
 }
 
+/**
+ * Determina o lote ativo baseado em data atual + vagas pagas acumuladas.
+ * - Lote N e o primeiro cuja data_fim ainda nao passou E vagas acumuladas
+ *   ate aquele lote ainda nao foram preenchidas.
+ * - Antes do lote 1 comecar: usa lote 1 como preview.
+ * - Apos lote 3 terminar OU vagas totais esgotadas: ESGOTADO.
+ */
 function precoAtual(): array {
-    $cfg = config()['evento'];
-    $sql = "SELECT COUNT(*) FROM inscricoes WHERE status IN ('CONFIRMED','RECEIVED')";
-    $pagas = (int) db()->query($sql)->fetchColumn();
+    $cfg   = config()['evento'];
+    $lotes = $cfg['lotes'];
+    $hoje  = date('Y-m-d');
 
-    $promo = $pagas < $cfg['vagas_promo'];
-    $vagas_restantes_total = max(0, $cfg['vagas_total'] - $pagas);
-    $vagas_restantes_promo = max(0, $cfg['vagas_promo'] - $pagas);
+    $pagas = (int) db()->query(
+        "SELECT COUNT(*) FROM inscricoes WHERE status IN ('CONFIRMED','RECEIVED')"
+    )->fetchColumn();
 
+    // Antes do primeiro lote comecar: usa lote 1 como preview
+    if ($hoje < $lotes[0]['inicio']) {
+        $l = $lotes[0];
+        return [
+            'pagas'           => $pagas,
+            'numero_lote'     => 1,
+            'nome_lote'       => $l['nome'],
+            'preco'           => (float) $l['preco'],
+            'lote'            => $l,
+            'lotes'           => $lotes,
+            'preco_maximo'    => max(array_column($lotes, 'preco')),
+            'vagas_total'     => $cfg['vagas_total'],
+            'vagas_restantes' => $l['vagas'],
+            'vagas_lote'      => $l['vagas'],
+            'esgotado'        => false,
+            'pre_venda'       => true,
+        ];
+    }
+
+    $vagasAcum = 0;
+    foreach ($lotes as $idx => $lote) {
+        $vagasAcum += $lote['vagas'];
+        // Pula lotes vencidos
+        if ($hoje > $lote['fim']) continue;
+        // Pula lotes cujas vagas (acumuladas) ja foram preenchidas
+        if ($pagas >= $vagasAcum) continue;
+
+        $vagasRestantesLote = $vagasAcum - $pagas;
+        return [
+            'pagas'           => $pagas,
+            'numero_lote'     => $idx + 1,
+            'nome_lote'       => $lote['nome'],
+            'preco'           => (float) $lote['preco'],
+            'lote'            => $lote,
+            'lotes'           => $lotes,
+            'preco_maximo'    => max(array_column($lotes, 'preco')),
+            'vagas_total'     => $cfg['vagas_total'],
+            'vagas_restantes' => max(0, $cfg['vagas_total'] - $pagas),
+            'vagas_lote'      => $vagasRestantesLote,
+            'esgotado'        => false,
+            'pre_venda'       => false,
+        ];
+    }
+
+    // Esgotado: ou todas as vagas pagas, ou todas as datas passaram
     return [
-        'pagas'                 => $pagas,
-        'promo_ativa'           => $promo,
-        'preco'                 => $promo ? $cfg['preco_promo'] : $cfg['preco_normal'],
-        'preco_promo'           => $cfg['preco_promo'],
-        'preco_normal'          => $cfg['preco_normal'],
-        'vagas_total'           => $cfg['vagas_total'],
-        'vagas_restantes'       => $vagas_restantes_total,
-        'vagas_restantes_promo' => $vagas_restantes_promo,
-        'esgotado'              => $vagas_restantes_total === 0,
+        'pagas'           => $pagas,
+        'numero_lote'     => null,
+        'nome_lote'       => null,
+        'preco'           => (float) end($lotes)['preco'],
+        'lote'            => end($lotes),
+        'lotes'           => $lotes,
+        'preco_maximo'    => max(array_column($lotes, 'preco')),
+        'vagas_total'     => $cfg['vagas_total'],
+        'vagas_restantes' => 0,
+        'vagas_lote'      => 0,
+        'esgotado'        => true,
+        'pre_venda'       => false,
     ];
 }

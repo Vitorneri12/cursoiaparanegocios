@@ -5,17 +5,19 @@ $evento = config()['evento'];
 try {
     $preco = precoAtual();
 } catch (Throwable $e) {
-    // Fallback se DB ainda nao configurado (preview local)
     $preco = [
         'pagas' => 0,
-        'promo_ativa' => true,
-        'preco' => $evento['preco_promo'],
-        'preco_promo' => $evento['preco_promo'],
-        'preco_normal' => $evento['preco_normal'],
+        'numero_lote' => 1,
+        'nome_lote' => $evento['lotes'][0]['nome'],
+        'preco' => $evento['lotes'][0]['preco'],
+        'lote' => $evento['lotes'][0],
+        'lotes' => $evento['lotes'],
+        'preco_maximo' => max(array_column($evento['lotes'], 'preco')),
         'vagas_total' => $evento['vagas_total'],
         'vagas_restantes' => $evento['vagas_total'],
-        'vagas_restantes_promo' => $evento['vagas_promo'],
+        'vagas_lote' => $evento['lotes'][0]['vagas'],
         'esgotado' => false,
+        'pre_venda' => false,
     ];
 }
 
@@ -33,13 +35,17 @@ $fmt = fn(float $v) => 'R$ ' . number_format($v, 2, ',', '.');
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Checkout — IA PARA NEGÓCIOS</title>
 <link rel="icon" href="assets/images/logo-compact.png">
-<link rel="stylesheet" href="assets/css/style.css?v=1">
+<link rel="stylesheet" href="assets/css/style.css?v=2">
 </head>
 <body class="page-checkout">
 
 <header class="topbar">
     <div class="container topbar-inner">
-        <a href="index.php" class="logo"><img src="assets/images/logo.png" alt="TexanEduc"></a>
+        <a href="index.php" class="logo logo-group">
+            <img src="assets/images/logo.png" alt="TexanEduc">
+            <span class="logo-by">por</span>
+            <span class="logo-tg-wrap"><img src="assets/images/logo-texangroup.png" alt="Texan Group"></span>
+        </a>
         <div class="topbar-actions">
             <a href="https://wa.me/5519978033293?text=Ol%C3%A1!%20Tenho%20uma%20d%C3%BAvida%20sobre%20a%20palestra%20IA%20PARA%20NEG%C3%93CIOS" target="_blank" rel="noopener" class="btn btn-whatsapp btn-sm">
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
@@ -197,8 +203,8 @@ $fmt = fn(float $v) => 'R$ ' . number_format($v, 2, ',', '.');
                 <span>Total</span>
                 <strong id="sum-total"><?= $fmt($preco['preco']) ?></strong>
             </div>
-            <?php if ($preco['promo_ativa']): ?>
-                <p class="muted small">Lote promocional · economia de <?= $fmt($preco['preco_normal'] - $preco['preco_promo']) ?></p>
+            <?php if ($preco['preco'] < $preco['preco_maximo']): ?>
+                <p class="muted small"><?= htmlspecialchars($preco['nome_lote']) ?> · economia de <?= $fmt($preco['preco_maximo'] - $preco['preco']) ?></p>
             <?php endif; ?>
             <ul class="sum-includes">
                 <li>✓ Participação na palestra</li>
