@@ -279,7 +279,7 @@ $fmtData = fn(string $d) => date('d/m', strtotime($d));
                 </div>
                 <div class="speaker-actions">
                     <button type="button" class="link-more" data-toggle>Ler mais ↓</button>
-                    <a href="https://www.linkedin.com/in/higorgimenes" target="_blank" rel="noopener" class="link-li">LinkedIn →</a>
+                    <a href="https://www.linkedin.com/in/higor-gimenes/" target="_blank" rel="noopener" class="link-li">LinkedIn →</a>
                 </div>
             </article>
 
@@ -298,7 +298,7 @@ $fmtData = fn(string $d) => date('d/m', strtotime($d));
                 </div>
                 <div class="speaker-actions">
                     <button type="button" class="link-more" data-toggle>Ler mais ↓</button>
-                    <a href="https://www.linkedin.com/in/claudio-soldera" target="_blank" rel="noopener" class="link-li">LinkedIn →</a>
+                    <a href="https://www.linkedin.com/in/csoldera/" target="_blank" rel="noopener" class="link-li">LinkedIn →</a>
                 </div>
             </article>
 
@@ -317,7 +317,7 @@ $fmtData = fn(string $d) => date('d/m', strtotime($d));
                 </div>
                 <div class="speaker-actions">
                     <button type="button" class="link-more" data-toggle>Ler mais ↓</button>
-                    <a href="https://www.linkedin.com/in/guilherme-cabreira" target="_blank" rel="noopener" class="link-li">LinkedIn →</a>
+                    <a href="https://www.linkedin.com/in/guilhermecabreira/" target="_blank" rel="noopener" class="link-li">LinkedIn →</a>
                 </div>
             </article>
 
@@ -335,7 +335,7 @@ $fmtData = fn(string $d) => date('d/m', strtotime($d));
                 </div>
                 <div class="speaker-actions">
                     <button type="button" class="link-more" data-toggle>Ler mais ↓</button>
-                    <a href="http://lattes.cnpq.br" target="_blank" rel="noopener" class="link-li">Lattes →</a>
+                    <a href="http://lattes.cnpq.br/2921905681838646" target="_blank" rel="noopener" class="link-li">Lattes →</a>
                 </div>
             </article>
         </div>
